@@ -37,7 +37,17 @@ class QuotesApp extends StatelessWidget {
         '/quote': (context) => const QuoteScreen(),
         '/settings': (context) => const SettingsScreen(),
         '/about': (context) => const AboutScreen(),
-        '/privacy': (context) => const PrivacyPolicyScreen(),
+        // '/privacy': (context) => const PrivacyPolicyPage(),
+        //   Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => WebViewPage(title: title, url: url),
+        //   ),
+        // );
+        '/privacy': (context) => const WebViewPage(
+              title: 'Privacy Policy',
+              url: 'https://www.google.com',
+            ),
+
         '/favorites': (context) => const FavoritesScreen(),
       },
     );
@@ -94,6 +104,33 @@ class HomeScreen extends StatelessWidget {
                     },
                     child:
                         const Text('FAVORITES', style: TextStyle(fontSize: 24)),
+                  ),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.black,
+                      backgroundColor: Colors.grey[300],
+                      padding: const EdgeInsets.symmetric(vertical: 20.0),
+                      minimumSize: const Size(double.infinity, 60),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/about');
+                    },
+                    child: const Text('ABOUT', style: TextStyle(fontSize: 24)),
+                  ),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.black,
+                      backgroundColor: Colors.grey[300],
+                      padding: const EdgeInsets.symmetric(vertical: 20.0),
+                      minimumSize: const Size(double.infinity, 60),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/privacy');
+                    },
+                    child: const Text('PRIVACY POLICY',
+                        style: TextStyle(fontSize: 24)),
                   ),
                 ],
               ),

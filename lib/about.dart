@@ -35,7 +35,7 @@ class AboutScreen extends StatelessWidget {
             const Spacer(),
             Center(
               child: Text(
-                '© 2024 Your Company Name',
+                '© 2024 Codesway',
                 style: Theme.of(context).textTheme.bodySmall,
               ),
             ),
