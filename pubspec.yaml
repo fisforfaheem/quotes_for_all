@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_animate: ^4.5.0
+  google_fonts: ^6.2.1
   share_plus: ^10.0.2
   shared_preferences: ^2.3.2
   webview_flutter: ^4.9.0
